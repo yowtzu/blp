@@ -158,7 +158,7 @@ class BLPService:
                 override.setElement('value', v)
         else:
             for k, v in elements.items():
-                if type(v) == datetime.datetime:
+                if isinstance(v, datetime.datetime) or isinstance(v, pd.tslib.Timestamp):
                     v = v.strftime('%Y%m%d')
                 request.set(k, v)
 

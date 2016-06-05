@@ -81,10 +81,11 @@ class BLPService:
 
             keys.append(security_data.getElementAsString('security'))
 
-            if not df.empty:
-                data.append(df)
+            # if not df.empty:
+            data.append(df)
 
         data = pd.concat(data, keys=keys, axis=1)
+
         return data
 
     def BDP(self, securities, fields, **kwargs):

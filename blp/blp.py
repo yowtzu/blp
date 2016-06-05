@@ -50,7 +50,13 @@ class BLPService:
         params = {'startDate': start_date,
                   'endDate': end_date,
                   'periodicityAdjustment': 'ACTUAL',
-                  'periodicitySelection': 'DAILY'}
+                  'periodicitySelection': 'DAILY',
+                  'nonTradingDayFillOption': 'ACTIVE_DAYS_ONLY',
+                  'adjustmentNormal': False,
+                  'adjustmentAbnormal': False,
+                  'adjustmentSplit': True,
+                  'adjustmentFollowDPDF': False}
+
         params.update(kwargs)
 
         response = self._send_request('HistoricalData', securities, fields, params)

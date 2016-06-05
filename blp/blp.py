@@ -84,7 +84,12 @@ class BLPService:
             if not df.empty:
                 data.append(df)
 
-        data = pd.concat(data, keys=keys, axis=1)
+        # This is to take care of all empty cases
+        try:
+            data = pd.concat(data, keys=keys, axis=1)
+        except ValueError as e:
+            data = pd.DataFrame()
+
         return data
 
     def BDP(self, securities, fields, **kwargs):

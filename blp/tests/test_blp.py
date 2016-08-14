@@ -2,6 +2,7 @@ import unittest
 from datetime import datetime
 from blp import blp
 
+
 class TestBLPService(unittest.TestCase):
 
     def setUp(self):

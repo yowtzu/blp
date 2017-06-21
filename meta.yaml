@@ -13,12 +13,14 @@ requirements:
     - numpy
     - pandas
     - nose
+    - blpapi
 
   run:
     - python
     - numpy
     - pandas
     - nose
+    - blpapi
 
   # Python imports
   #imports:

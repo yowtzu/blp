@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='blp',
-    version='0.0.1-alpha',
+    version='0.0.2',
     description='Bloomberg API Wrapper',
     url='http://github.com/yowtzu/blp',
     author='Yow Tzu Lim',

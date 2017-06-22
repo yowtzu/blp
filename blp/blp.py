@@ -76,7 +76,7 @@ class BLPService:
                           field.getElement(i).name() != 'date']:
                     df.ix[field.getElementAsDatetime('date'), str(v.name())] = v.getValue()
 
-            df.index = df.index.to_datetime()
+            df.index = pd.to_datetime(df.index)
             df.replace('#N/A History', np.nan, inplace=True)
 
             keys.append(security_data.getElementAsString('security'))

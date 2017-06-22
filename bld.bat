@@ -1,5 +1,5 @@
 set CONDA_HOME=C:\Users\"%USERNAME%"\Anaconda3
-xcopy "%CONDA_HOME%"\Lib\site-packages\blpapi "%CONDA_HOME%"\envs\_build\Lib\site-packages\blpapi /e /i
+:: xcopy "%CONDA_HOME%"\Lib\site-packages\blpapi "%CONDA_HOME%"\envs\_build\Lib\site-packages\blpapi /e /i
 if errorlevel 1 exit 1
 
 nosetests --verbose

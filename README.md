@@ -17,6 +17,10 @@ All calls are blocking and return a (possibly empty) DataFrame object, a BLPRequ
 ```
 git clone https://github.com/yowtzu/blp.git
 ```
+(Optional). Make sure dependencies channel (mbonix) is included
+```
+conda config --all channels mobnix
+
 2. Navigate to the base directory (~/blp/.) and build the conda package
 ```
 conda build . 
